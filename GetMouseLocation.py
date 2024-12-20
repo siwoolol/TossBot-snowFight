@@ -1,4 +1,7 @@
+import time
 import pyautogui
 
-pos = pyautogui.position()
-print(f"mousePos: {pos}")
+while(True):
+    pos = pyautogui.position()
+    print(f"mousePos: {pos}")
+    time.sleep(1)
