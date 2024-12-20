@@ -13,7 +13,8 @@ import win32api, win32con
 def click(x,y):
     win32api.SetCursorPos((x,y))
     win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN,0,0)
-    time.sleep(0.1)
+    rr = random.randint(0.03,0.06)
+    time.sleep(rr)
     win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP,0,0)
 
 while keyboard.is_pressed('q') == False:
@@ -31,8 +32,3 @@ while keyboard.is_pressed('q') == False:
         click(423, 769)
         print("r(0) detected in (423, 769)")
         print("object clicked")
-
-while keyboard.is_pressed('q') == False:
-    pos = pyautogui.position()
-    print(f"mousePos: {pos}")
-    time.sleep(0.1)
